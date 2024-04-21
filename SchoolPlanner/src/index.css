@@ -1,0 +1,64 @@
+/*Color Codes
+/* 
+#222831 Dark
+#31363F Light Dark
+#76ABAE Blue
+#EEEEEE light grey
+*/
+
+
+/* General styling for the sidebar container */
+.side-bar {
+  background-color: #222831;
+  width: 200px; /* More specific width for consistency */
+  text-align: left;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px; /* Added padding for better spacing */
+  height: 100vh; /* Using vh for viewport height consistency */
+  display: flex; /* Using flex to align items */
+  flex-direction: column; /* Align items vertically */
+}
+
+/* Styling for the header in the sidebar */
+.header-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.25em;
+  font-weight: bold;
+  background-color: #222831; /* Simplified color code */
+  color: #EEEEEE; /* Added text color for contrast */
+  padding: 10px 0; /* Padding for top and bottom */
+  text-align: left; /* Centering the title text */
+  width: 100%; /* Full width to fit the sidebar */
+
+}
+
+/* Styling for the list of options */
+.options {
+  list-style: none;
+  font-size: 1em;
+  color: #EEEEEE;
+  padding: 20px; /* Uniform padding */
+  margin: 0;
+  flex-grow: 1; /* Makes it fill available space */
+  text-align: left;
+  
+}
+
+/* Improved hover effects for list items */
+.options li {
+  padding: 10px; /* Padding for each item */
+  margin: 5px 0; /* Space between items */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.options li:hover {
+  background-color: #31363F; /* Light background on hover */
+  color: #EEEEEE; /* Dark text on hover */
+  border: 1px solid #31363F; /* Border matching the sidebar color */
+  border-radius: 5px; /* Rounded corners for aesthetics */
+  cursor: pointer;
+  box-shadow: 5px 5px 5px hsl(183, 26%, 25%);
+}
