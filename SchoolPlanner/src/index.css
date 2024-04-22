@@ -16,22 +16,24 @@
   position: fixed;
   top: 0;
   left: 0;
-  padding: 20px; /* Added padding for better spacing */
+  padding: 20px 10px 20px 10px; /* Added padding for better spacing */
   height: 100vh; /* Using vh for viewport height consistency */
   display: flex; /* Using flex to align items */
   flex-direction: column; /* Align items vertically */
 }
 
 /* Styling for the header in the sidebar */
-.header-title {
+.side-bar-title {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.25em;
   font-weight: bold;
-  background-color: #222831; /* Simplified color code */
+  background-color: transparent; /* Simplified color code */
   color: #EEEEEE; /* Added text color for contrast */
   padding: 10px 0; /* Padding for top and bottom */
   text-align: left; /* Centering the title text */
   width: 100%; /* Full width to fit the sidebar */
+  /* box-shadow: 2px 5px 2px #31363F; */
+  border-radius: 10px;
 
 }
 
@@ -40,10 +42,11 @@
   list-style: none;
   font-size: 1em;
   color: #EEEEEE;
-  padding: 20px; /* Uniform padding */
+  padding: 0px; /* Uniform padding */
   margin: 0;
   flex-grow: 1; /* Makes it fill available space */
   text-align: left;
+  width: 95%;
   
 }
 
@@ -56,9 +59,23 @@
 
 .options li:hover {
   background-color: #31363F; /* Light background on hover */
-  color: #EEEEEE; /* Dark text on hover */
+  color: hsl(0, 0%, 60%); /* Dark text on hover */
   border: 1px solid #31363F; /* Border matching the sidebar color */
   border-radius: 5px; /* Rounded corners for aesthetics */
   cursor: pointer;
   box-shadow: 5px 5px 5px hsl(183, 26%, 25%);
 }
+
+
+.options-item {
+  display: flex; /* Aligns the icon and text side by side */
+  align-items: center; /* Centers them vertically */
+  cursor: pointer; /* Pointer cursor on hover */
+  padding: 10px; /* Padding for each item */
+  margin: 5px 0; /* Space between items */
+}
+
+.options-item svg {
+  margin-right: 5px; /* Adds spacing between the icon and the text */
+}
+

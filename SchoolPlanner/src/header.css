@@ -1,0 +1,99 @@
+/*Color Codes*/
+:root{
+    --Dark: #222831;
+    --LightDark: #31363F;
+    --Blue: #76ABAE;
+    --Light: #EEEEEE;
+
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--Dark);
+    padding: 10px 20px;
+    border-color: var(--LightDark) solid;
+    color: var(--Light);
+  
+}
+.header:first-child {
+    margin-top: 0;
+}
+  
+.header-title {
+    margin: 0;
+    color: var(--Light);
+    font-size: 24px;
+    flex: 1;
+}
+  
+.search-bar {
+    display: flex;
+    align-items: Center;
+    border: 1px solid var(--LightDark);
+    padding: 5px 10px;
+    border-radius: 20px;
+    box-shadow: 0.5px 1px 0.5px var(--LightDark);
+    background-color: var(--LightDark);
+    
+}
+  
+.search-bar input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--Light);
+    width: 100%;
+}
+  
+.language-selector,
+.notifications,
+.user-profile {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px 10px;
+    color: var(--Light);
+    margin-left: 20px;
+}
+.user-profile {
+    margin-left: 20px;
+    border-left: 1px solid var(--LightDark);
+}
+.user-profile span {
+    margin-left: 5px;
+
+}
+  
+.user-role {
+    font-size: 0.75em;
+    margin-left: 5px;
+    color: var(--Light);
+}
+  
+  /* Add some space between icons and text, adjust sizes as needed */
+.header svg {
+    margin-right: 5px;
+    color: var(--Light);
+}
+.notifications svg:first-child {
+    margin-right: 10px; /* Adjust the right margin to increase spacing */
+}
+
+.notifications :hover{
+    color: hsl(0, 0%, 45%);
+    cursor: pointer;
+}
+.user-profile :hover {    
+    color: hsl(0, 0%, 45%);
+    cursor: pointer;
+  }
