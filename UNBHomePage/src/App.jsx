@@ -51,5 +51,4 @@ function App() {
     </ColorModeContext.Provider>
   );
 }
-
 export default App;

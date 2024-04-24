@@ -11,8 +11,9 @@ import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import SearchIcon from "@mui/icons-material/Search";
 
 
-function TopBar(){
 
+function TopBar(){
+    
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     const colorMode = useContext(ColorModeContext);
@@ -20,17 +21,16 @@ function TopBar(){
     const navigate = useNavigate();
 
     const handleNavigate = () => {
-        navigate('../notifications'); // Replace '/faq' with the path you use for the FAQ page
+        navigate('../notifications'); 
     };
 
-    // <Route path="/faq" element={<FAQ/>} />
     return(
         <Box display="flex" justifyContent="space-between" p={2}>
             {/* Search Bar */}
             <Box 
                 display="flex"
                 backgroundColor={colors.primary[400]}
-                borderRadius="3px"
+                borderRadius="10px"
             >
                 <InputBase sx={{ ml: 2, flex: 1 }} placeholder="Search"/>
                 <IconButton type="button" sx={{ p:1 }}>
@@ -51,7 +51,8 @@ function TopBar(){
                 </IconButton>
 
                 <IconButton onClick={handleNavigate}>
-                    <NotificationsOutlinedIcon />
+                    <NotificationsOutlinedIcon/>
+                
                 </IconButton>
 
                 <IconButton>

@@ -19,6 +19,7 @@ import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import MapOutlinedIcon from '@mui/icons-material/MapOutlined';
 import userImage from '../../assets/user.jpeg';
 import PieChartOutlineOutlined from '@mui/icons-material/PieChartOutlineOutlined';
+// import FolderIcon from '@mui/material-ui/icons/Folder';
 
 const Item = ({title, to, icon, selected, setSelected}) => {
 
@@ -28,7 +29,7 @@ const Item = ({title, to, icon, selected, setSelected}) => {
     return(
         <MenuItem 
             active={selected === title} 
-            style={{color: colors.grey[100]}}
+            style={{color: colors.secondary[100]}}
             onClick={() => setSelected(title)}
             icon={icon}
         >
@@ -46,6 +47,8 @@ function SideBar(){
     const colors = tokens(theme.palette.mode);
     const [isCollapsed, setIsCollapsed] = useState(false);
     const [selected, setSelected] = useState('Dashboard');
+    
+    const activeColor = colors.accentTwo[700];
 
 
     return(
@@ -62,12 +65,12 @@ function SideBar(){
                     padding: '5px 35px 5px 20px !important',
                 },
                 '& .pro-inner-item:hover': {
-                    color: '#868dfb !important',
+                    color: `${colors.accentTwo[400]} !important`,
                     
             
                 },
                 '& .pro-menu-item.active': {
-                    color: '#6870fa !important',
+                    color: `${colors.accentTwo[500]} !important`,
                 },
             }}
              
@@ -83,7 +86,7 @@ function SideBar(){
                         icon={isCollapsed ? <MenuOutlinedIcon/> : undefined}
                         style={{
                             margin: '10px 0 20px 0',
-                            color: colors.grey[100],
+                            color: colors.secondary[100],
                         }}
                     >
                         
@@ -95,7 +98,7 @@ function SideBar(){
                                 alignItems='center' 
                                 ml='15px'
                             >
-                                <Typography variant='h4' color={colors.grey[100]}>ADMIN</Typography>
+                                <Typography variant='h4' color={colors.secondary[100]}>ADMIN</Typography>
 
                                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
     
@@ -125,10 +128,10 @@ function SideBar(){
                             </Box>
 
                             <Box textAlign='center'>
-                                <Typography variant='h2' color={colors.grey[100]} fontWeight='bold' sx={{m: '10px 0 0 0'}} >
+                                <Typography variant='h2' color={colors.secondary[100]} fontWeight='bold' sx={{m: '10px 0 0 0'}} >
                                     Will Ross
                                 </Typography>
-                                <Typography variant='h5' color={colors.greenAccent[500]} fontWeight='bold' sx={{m: '10px 0 0 0'}}>
+                                <Typography variant='h5' color={colors.tertiary[500]} fontWeight='bold' sx={{m: '10px 0 0 0'}}>
                                     Software Engineer
                                 </Typography>
                             </Box>
@@ -148,7 +151,7 @@ function SideBar(){
 
                         <Typography 
                             variant='h6'
-                            color={colors.grey[300]}
+                            color={colors.secondary[300]}
                             sx={{m: '15px 0 5px 20px'}}
                         >
                             Data
@@ -156,7 +159,7 @@ function SideBar(){
                         </Typography>
 
                         <Item 
-                            title='Manage Team'
+                            title='To-Do List'
                             to='/team'
                             icon={<PeopleOutlinedIcon/>}
                             selected={selected}
@@ -164,7 +167,7 @@ function SideBar(){
                         />
 
                         <Item 
-                            title='Contacts'
+                            title='Courses'
                             to='/contacts'
                             icon={<ContactsOutlinedIcon/>}
                             selected={selected}
@@ -172,7 +175,7 @@ function SideBar(){
                         />
 
                         <Item 
-                            title='Invoices Balances'
+                            title='Files'
                             to='/invoices'
                             icon={<ReceiptOutlinedIcon/>}
                             selected={selected}
@@ -181,7 +184,7 @@ function SideBar(){
 
                         <Typography 
                             variant='h6'
-                            color={colors.grey[300]}
+                            color={colors.secondary[300]}
                             sx={{m: '15px 0 5px 20px'}}
                         >
                             Pages
@@ -203,7 +206,7 @@ function SideBar(){
                             setSelected={setSelected}
                         />
                         <Item 
-                            title='FAQ'
+                            title='Notifications'
                             to='/faq'
                             icon={<HelpOutlineOutlinedIcon/>}
                             selected={selected}
@@ -212,7 +215,7 @@ function SideBar(){
 
                         <Typography 
                             variant='h6'
-                            color={colors.grey[300]}
+                            color={colors.secondary[300]}
                             sx={{m: '15px 0 5px 20px'}}
                         >
                             Charts
@@ -220,7 +223,7 @@ function SideBar(){
                         </Typography>
 
                         <Item 
-                            title='Bar Chart'
+                            title='Grades'
                             to='/bar'
                             icon={<BarChartOutlinedIcon/>}
                             selected={selected}
