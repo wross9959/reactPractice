@@ -691,10 +691,7 @@ const colorPalettes = [
             }
         }
     }
-]
-      
-
-
+];
 // Color design tokens
 export const tokens = (mode) => ({
     ...(mode === "dark"
